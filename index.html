@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Sarabun&display=swap');
+        body {
+            background-color: whitesmoke;
+        }
+        h1 {
+            font-family: 'Kanit', sans-serif;
+            color: #000000;
+        }
+        p, div {
+            font-family: Sarabun, sans-serif;
+        }
+        img {
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+        table {
+            border-style: solid;
+            border-width: 1px;
+        }
+        .center {
+            text-align: center;
+        }
+        button {
+            font-family: 'Kanit', sans-serif;
+            font-size: large;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="center" id="header">สวัสดีชาวโลก</h1>
+    <div class="center">
+        <button type="button" onclick="document.getElementById('header').style.color='red'">เปลี่ยนสี</button>
+    </div>
+
+    <h1 class="center" id="time"></h1>
+
+    <script>
+    const d = new Date();
+    document.getElementById("time").innerHTML = d.toUTCString();
+    </script>
+        
+
+    <div class="center">
+        <button onclick="document.getElementById('myImage').src='images/Idle.png'">แมวยืน</button>
+        <img id="myImage" src="images/Idle.png" width="200px">    
+        <button onclick="document.getElementById('myImage').src='images/Slide.png'">แมวสไลด์</button>
+    </div>
+    <br><br><br><br>
+
+    <div class="center">
+        <button>แสดงสินค้า</button>
+        <button>ซ่อนสินค้า</button>
+    </div>
+    <br><br>
+
+    <div onchange="test">
+    <h1>Number #1</h1>
+    <input id="Num1">
+    <h1>Number #2</h1>
+    <input id="Num2">
+    <h1>Number #3</h1>
+    <input id="Num3">
+    </div>
+
+    <output name="test" for="Num1 Num2 Num3"></output>
+    
+  </body>
+</html>
